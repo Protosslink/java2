@@ -1,19 +1,13 @@
 
-/**
- *
- *
- *
- */
 
 import java.util.Scanner;
-
 
 public class ChoiseProgramm {
 
     public int ChoiseProg () {
-        System.out.println("Для запуска калькулятора введите 1");
-        System.out.println("Для поиска максимального числа в массиве введите 2");
-        System.out.print("Ввод числа: ");
+        System.out.println("1 Калькулятор");
+        System.out.println("2 Поиск максимального числа в массиве");
+        System.out.print("Введите номер приложения: ");
         Scanner scanerChoise = new Scanner(System.in);
         int choise = scanerChoise.nextInt();
         if (choise != 1 && choise != 2) {
@@ -23,7 +17,7 @@ public class ChoiseProgramm {
             if (choise == 1) System.out.println("Выбран калькулятор");
             else System.out.println("Выбран поиск максимального числа в массиве");
         }
-        scanerChoise.close();
+        //scanerChoise.close();
         return choise;
     }
 }

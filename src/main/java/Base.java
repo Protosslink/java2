@@ -12,8 +12,9 @@ public class Base {
         ChoiseProgramm chProg = new ChoiseProgramm();
         int selected = chProg.ChoiseProg();
 
-        //Запус приложения
-        StartApp startApp1 = new StartApp(selected);
+        //Запуск калькулятора
+        Calc Calculator = new Calc();
+        Calculator.selectOperation();
 
     }
 }
