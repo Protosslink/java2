@@ -1,25 +1,42 @@
 import java.util.Scanner;
 
 public class Calc {
-
-    //Ввод операции пользователем
+    /*===================================================================================================*/
+    //Ввод и проверка ввода операции пользователем, функция возвращает номер операции (1,2,3,4)
     public int selectOperation() {
+        String[] arr = new String[]{"", "сложение", "вычитание", "умножение", "деление"};
         System.out.println("Выбор операции");
-        System.out.println("1 Сложение");
-        System.out.println("2 Вычитание");
-        System.out.println("3 Умножение");
-        System.out.println("4 Деление");
+        System.out.println("1 " + arr[1]);
+        System.out.println("2 " + arr[2]);
+        System.out.println("3 " + arr[3]);
+        System.out.println("4 " + arr[4]);
         System.out.print("Введите номер операции: ");
         Scanner scannerSelectingAnOperation = new Scanner(System.in);
         int intSelectingAnOperation = scannerSelectingAnOperation.nextInt();
-        //System.out.print("Вы выбрали операцию " + intSelectingAnOperation);
-        if(intSelectingAnOperation > 4 || intSelectingAnOperation < 0){
+        if (intSelectingAnOperation > 4 || intSelectingAnOperation <= 0) {
             System.out.println("Ошибка ввода");
             System.exit(intSelectingAnOperation);
+        } else {
+            System.out.println("Выбрано " + arr[intSelectingAnOperation]);
         }
         return intSelectingAnOperation;
     }
+    /*=====================================================================================================*/
+
+    //Сложение
+    public void summation() {
+        Scanner scannerSummation = new Scanner(System.in);
+        float x;
+        float y;
+        System.out.print("Введите дробное число: ");
+        x = scannerSummation.nextFloat();
+        System.out.print("Введите дробное число: ");
+        y = scannerSummation.nextFloat();
+        System.out.println(x + y);
+    }
 }
+
+
 
 
 

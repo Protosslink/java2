@@ -16,6 +16,9 @@ public class Base {
         Calc Calculator = new Calc();
         Calculator.selectOperation();
 
+        //Сложение
+        Calculator.summation();
+
     }
 }
 
