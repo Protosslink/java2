@@ -18,6 +18,10 @@ public class Calc {
             System.exit(intSelectingAnOperation);
         } else {
             System.out.println("Выбрано " + arr[intSelectingAnOperation]);
+            if (intSelectingAnOperation == 1) summation();
+            else if (intSelectingAnOperation == 2) subtraction();
+            else if (intSelectingAnOperation == 3) multiplication();
+            else if (intSelectingAnOperation == 4) division();
         }
         return intSelectingAnOperation;
     }
@@ -32,10 +36,50 @@ public class Calc {
         x = scannerSummation.nextFloat();
         System.out.print("Введите дробное число: ");
         y = scannerSummation.nextFloat();
-        System.out.println(x + y);
+        System.out.printf("%.4f", x + y);
+    }
+
+    //Вычитание
+    public void subtraction() {
+        Scanner scannerSummation = new Scanner(System.in);
+        float x;
+        float y;
+        System.out.print("Введите дробное число: ");
+        x = scannerSummation.nextFloat();
+        System.out.print("Введите дробное число: ");
+        y = scannerSummation.nextFloat();
+        System.out.printf("%.4f", x - y);
+
+    }
+
+    //Уможение
+    public void multiplication() {
+        Scanner scannerSummation = new Scanner(System.in);
+        float x;
+        float y;
+        System.out.print("Введите дробное число: ");
+        x = scannerSummation.nextFloat();
+        System.out.print("Введите дробное число: ");
+        y = scannerSummation.nextFloat();
+        System.out.printf("%.4f", x * y);
+
+    }
+
+    //Деление
+    public void division() {
+        Scanner scannerSummation = new Scanner(System.in);
+        float x;
+        float y;
+        System.out.print("Введите дробное число: ");
+        x = scannerSummation.nextFloat();
+        System.out.print("Введите дробное число: ");
+        y = scannerSummation.nextFloat();
+        System.out.printf("%.4f", x / y);
+
     }
 }
 
+/*===========================================================================================================*/
 
 
 
