@@ -17,6 +17,8 @@ public class ChoiseProgramm {
                 Calc newCalc = new Calc();
                 newCalc.selectOperation();
             } else System.out.println("Выбран поиск максимального числа в массиве");
+            ArrWords newArrWords = new ArrWords();
+            newArrWords.maxWordsArr();
         }
         return choise;
     }
