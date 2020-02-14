@@ -1,3 +1,13 @@
+/**
+ * @author Barabanov Dmitriy
+ * @Class Calc используется в классе ChoiseProgramm
+ * @see #selectOperation
+ * @see #summation
+ * @see #subtraction
+ * @see #multiplication
+ * @see #division
+ */
+
 import java.util.Scanner;
 
 public class Calc {
