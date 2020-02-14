@@ -19,11 +19,15 @@ public class ArrWords {
             String newWord = scannerAddWords.nextLine();
             arrWordsString[i] = newWord;
         }
-        String longWord = "";
-        int len = 0;
-        for(String num: arrWordsString){
-            if(String.le)
-        }
-    }
+        int maxWord = 0;
+                for(int i = 0; i < arrWordsString.length - 1;i++){
+                    if(arrWordsString[i].length() > maxWord){
+                        maxWord = arrWordsString[i].length();
+                    }
+                }
+        System.out.println(arrWordsString[maxWord]);
 
+    }
 }
+
+
