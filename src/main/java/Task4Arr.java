@@ -15,7 +15,7 @@ public class Task4Arr {
         //Заполнение массива
         for (int i = 0; i < arr.length - 1; i++) {
             arr[i] = numArr(-10, 10);
-            System.out.println(arr[i]);
+            //System.out.println(arr[i]);
         }
     }
 }
