@@ -10,7 +10,7 @@ public class Candy {
         return title;
     }
 
-    public void setTitle() {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -19,7 +19,7 @@ public class Candy {
         return weight;
     }
 
-    public void setWeight() {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -28,7 +28,7 @@ public class Candy {
         return price;
     }
 
-    public void setPrice() {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -37,7 +37,7 @@ public class Candy {
         return color;
     }
 
-    public void setColor() {
+    public void setColor(String color) {
         this.color = color;
     }
 
