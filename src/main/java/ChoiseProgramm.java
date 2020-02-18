@@ -13,11 +13,12 @@ public class ChoiseProgramm {
         System.out.println("1 калькулятор");
         System.out.println("2 поиск максимального числа в массиве");
         System.out.println("3 задание 4 массив");
+        System.out.println("4 задание 4 формирование подарка");
         System.out.print("Введите номер приложения: ");
         Scanner scanerChoise = new Scanner(System.in);
         int choise = scanerChoise.nextInt();
         /*Проверка выбора опрерации пользователем, 1 или 2, иначе ошибка*/
-        if (choise < 1 || choise > 3) {
+        if (choise < 1 || choise > 4) {
             System.out.println("Ошибка ввода");
             System.exit(choise);
         } else {
@@ -36,6 +37,10 @@ public class ChoiseProgramm {
                 System.out.println("Выбрано задание 4 массив");
                 Task4Arr newTask = new Task4Arr();
                 newTask.addArrInt();
+            }else if (choise == 4) {
+                System.out.println("Выбрано задание 4 Формирование подарка");
+                Task4Gift newGift = new Task4Gift();
+
             }
         }
         return choise;
