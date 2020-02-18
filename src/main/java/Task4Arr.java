@@ -16,7 +16,7 @@ public class Task4Arr {
         int[] arr;
         //Определение Массива
         arr = new int[20];
-        //Заполнение массива
+        //Инициализация массива числами от -10 до 10
         for (int i = 0; i < arr.length - 1; i++) {
             arr[i] = numArr(-10, 10);
         }
