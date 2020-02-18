@@ -11,7 +11,7 @@ public class Task4Arr {
     public void addArrInt() {
 
         int maxNegativeNum = 0; //Максимальный отрицательный элемент
-        int minPositiveNum = 0; //Минимальный положительный элемент
+        int minPositiveNum = 10; //Минимальный положительный элемент
         //Объявление массива
         int[] arr;
         //Определение Массива
@@ -29,17 +29,27 @@ public class Task4Arr {
                 maxNegativeNum = arr[i];
             }
         }
-        System.out.println("====================================================================");
         System.out.println("Максимальный отрицательный элемет = " + maxNegativeNum);
 
         //Нахождение минимального положительного числа
         int num = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > 0 && arr[i] < arr[i + 1]) {
+            if (arr[i] > 0 && arr[i] < minPositiveNum) {
                 minPositiveNum = arr[i];
             }
         }
         System.out.println("Минимальный положительный элемент = " + minPositiveNum);
+
+        //Меняем местами максимально отрицательный и минимально положительный элементы в массиве
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == maxNegativeNum) {
+                arr[i] = minPositiveNum;
+            } else if (arr[i] == minPositiveNum) {
+                arr[i] = maxNegativeNum;
+            }
+        }
+        //Вывод массива на экран
+        System.out.println(Arrays.toString(arr));
     }
 
 }
