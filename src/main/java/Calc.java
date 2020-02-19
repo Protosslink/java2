@@ -28,64 +28,39 @@ public class Calc {
             System.exit(intSelectingAnOperation);
         } else {
             System.out.println("Выбрано " + arr[intSelectingAnOperation]);
-            if (intSelectingAnOperation == 1) summation();
-            else if (intSelectingAnOperation == 2) subtraction();
-            else if (intSelectingAnOperation == 3) multiplication();
-            else if (intSelectingAnOperation == 4) division();
+            if (intSelectingAnOperation == 1) summation(addNum(), addNum());
+            else if (intSelectingAnOperation == 2) subtraction(addNum(), addNum());
+            else if (intSelectingAnOperation == 3) multiplication(addNum(), addNum());
+            else if (intSelectingAnOperation == 4) division(addNum(), addNum());
         }
         return intSelectingAnOperation;
     }
 
+    //Ввод числа
+    public float addNum() {
+        Scanner scannerAddNum = new Scanner(System.in);
+        System.out.print("Введите дробное число: ");
+        return scannerAddNum.nextFloat();
+    }
 
     //Сложение
-    public void summation() {
-        Scanner scannerSummation = new Scanner(System.in);
-        float x;
-        float y;
-        System.out.print("Введите дробное число: ");
-        x = scannerSummation.nextFloat();
-        System.out.print("Введите дробное число: ");
-        y = scannerSummation.nextFloat();
-        System.out.printf("%.4f", x + y);
+    public void summation(float a, float b) {
+        System.out.printf("%.4f", a + b);
     }
 
     //Вычитание
-    public void subtraction() {
-        Scanner scannerSummation = new Scanner(System.in);
-        float x;
-        float y;
-        System.out.print("Введите дробное число: ");
-        x = scannerSummation.nextFloat();
-        System.out.print("Введите дробное число: ");
-        y = scannerSummation.nextFloat();
-        System.out.printf("%.4f", x - y);
-
+    public void subtraction(float a, float b) {
+        System.out.printf("%.4f", a - b);
     }
 
     //Уможение
-    public void multiplication() {
-        Scanner scannerSummation = new Scanner(System.in);
-        float x;
-        float y;
-        System.out.print("Введите дробное число: ");
-        x = scannerSummation.nextFloat();
-        System.out.print("Введите дробное число: ");
-        y = scannerSummation.nextFloat();
-        System.out.printf("%.4f", x * y);
-
+    public void multiplication(float a, float b) {
+        System.out.printf("%.4f", a * b);
     }
 
     //Деление
-    public void division() {
-        Scanner scannerSummation = new Scanner(System.in);
-        float x;
-        float y;
-        System.out.print("Введите дробное число: ");
-        x = scannerSummation.nextFloat();
-        System.out.print("Введите дробное число: ");
-        y = scannerSummation.nextFloat();
-        System.out.printf("%.4f", x / y);
-
+    public void division(float a, float b) {
+        System.out.printf("%.4f", a / b);
     }
 }
 
