@@ -42,4 +42,6 @@ public class Candy {
     public void setColor(String color) {
         this.color = color;
     }
+
+
 }

@@ -1,3 +1,8 @@
+/**
+ * @author Barabanov D
+ * @class Task4Arr используется в классе ChoiseProgramm
+ */
+
 import java.util.Arrays;
 
 public class Task4Arr {

@@ -37,9 +37,10 @@ public class ChoiseProgramm {
                 System.out.println("Выбрано задание 4 массив");
                 Task4Arr newTask = new Task4Arr();
                 newTask.addArrInt();
-            }else if (choise == 4) {
+            } else if (choise == 4) {
                 System.out.println("Выбрано задание 4 Формирование подарка");
-                Task4Gift newGift = new Task4Gift();
+                Task4Candy task4Candy = new Task4Candy();
+                task4Candy.gift();
 
             }
         }
