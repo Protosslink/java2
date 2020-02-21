@@ -54,18 +54,15 @@ public class Task4Candy {
         jellybean.setWeight(scannerWeight());
         jellybean.setPrice(scannerPrice());
 
-
         //Вывод информации о подарке
-        System.out.println("Информация о концетах:");
+        System.out.println("Информация о конфетах:");
         System.out.println(candy.getTitle() + " цвет " + candy.getColor() + " вес " + candy.getWeight() + " цена " + candy.getPrice());
         System.out.println("Информация о мармеладе:");
         System.out.println(jellybean.getTitle() + " цвет " + jellybean.getColor() + " вес " + jellybean.getWeight() + " цена " + jellybean.getPrice());
         //Общая информация о подарке
         System.out.println("Общая стоимость подарка: " + totalPrice(candy.getPrice(), jellybean.getPrice()));
         System.out.println("Общий вес подарка: " + totalWeight(candy.getWeight(), jellybean.getWeight()));
-
     }
-
 }
 
 
