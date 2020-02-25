@@ -10,7 +10,7 @@ import java.util.Scanner;
 /*Выбор программы: Калькулятор или поиск максимального числа в массиве*/
 public class ChoiseProgramm {
 
-    public int ChoiseProg() throws FileNotFoundException {
+    public int ChoiseProg() {
         System.out.println("1 калькулятор");
         System.out.println("2 поиск максимального числа в массиве");
         System.out.println("3 задание 4 массив");

@@ -8,10 +8,9 @@ import java.util.Scanner;
 
 public class Task6 {
 
-
     //Чтение файла
     public static Scanner readFile() throws FileNotFoundException {
-        File file = new File("C:/Курсы/java2/src/Text1.txt");
+        File file = new File("Text1");
         Scanner scanFile = new Scanner(file);
         return scanFile;
     }
@@ -23,6 +22,7 @@ public class Task6 {
             showWords(scanFile);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.out.println("Файл не найден!");
         }
     }
 
