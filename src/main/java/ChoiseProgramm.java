@@ -4,21 +4,23 @@
  * @see #ChoiseProg
  */
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /*Выбор программы: Калькулятор или поиск максимального числа в массиве*/
 public class ChoiseProgramm {
 
-    public int ChoiseProg() {
+    public int ChoiseProg() throws FileNotFoundException {
         System.out.println("1 калькулятор");
         System.out.println("2 поиск максимального числа в массиве");
         System.out.println("3 задание 4 массив");
         System.out.println("4 задание 4 формирование подарка");
+        System.out.println("5 задание 6 чтение слов из файла");
         System.out.print("Введите номер приложения: ");
         Scanner scanerChoise = new Scanner(System.in);
         int choise = scanerChoise.nextInt();
-        /*Проверка выбора опрерации пользователем, 1 или 2, иначе ошибка*/
-        if (choise < 1 || choise > 4) {
+        /*Проверка выбора опрерации пользователем, 1 по 5, иначе ошибка*/
+        if (choise < 1 || choise > 5) {
             System.out.println("Ошибка ввода");
             System.exit(choise);
         } else {
@@ -38,10 +40,13 @@ public class ChoiseProgramm {
                 Task4Arr newTask = new Task4Arr();
                 newTask.addArrInt();
             } else if (choise == 4) {
-                System.out.println("Выбрано задание 4 Формирование подарка");
+                System.out.println("Выбрано задание 4 чтение слов из файла");
                 Task4Candy task4Candy = new Task4Candy();
                 task4Candy.gift();
-
+            } else if (choise == 5) {
+                System.out.println("Выбрано задание 6 Формирование подарка");
+                Task6 task6 = new Task6();
+                task6.readWordsInTxt();
             }
         }
         return choise;
