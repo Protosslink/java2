@@ -31,7 +31,9 @@ public class Calc {
             if (intSelectingAnOperation == 1) summation(addNum(), addNum());
             else if (intSelectingAnOperation == 2) subtraction(addNum(), addNum());
             else if (intSelectingAnOperation == 3) multiplication(addNum(), addNum());
-            else if (intSelectingAnOperation == 4) division(addNum(), addNum());
+            else if (intSelectingAnOperation == 4) {
+                division(addNum(), addNum());
+            }
         }
         return intSelectingAnOperation;
     }
@@ -60,9 +62,15 @@ public class Calc {
 
     //Деление
     public void division(float a, float b) {
-        System.out.printf("%.4f", a / b);
+        try {
+            System.out.printf("%.4f", a / b);
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка! Нельзя делить на ноль!");
+        }
     }
 }
+
+
 
 
 
