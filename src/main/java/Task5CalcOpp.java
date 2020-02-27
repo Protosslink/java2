@@ -8,6 +8,7 @@ public class Task5CalcOpp {
     private float numResult = 0;
     private int numChoiceOperation = 0;
 
+
     //Гетеры и сетеры
     public float getNumOne() {
         return numOne;
@@ -50,14 +51,6 @@ public class Task5CalcOpp {
         Scanner scannerChoiseNum = new Scanner(System.in);
         int choiceNum = scannerChoiseNum.nextInt();
         setNumChoiceOperation(choiceNum);
-        scannerChoiseNum.close();
-    }
-
-    //Расчет оперции
-
-    //Вывод результата
-    public void showResult() {
-        System.out.println("Ответ " + getNumResult());
     }
 
     //Ввод чисел
@@ -66,5 +59,55 @@ public class Task5CalcOpp {
         Scanner scannerAddNum = new Scanner(System.in);
         float scannerNum = scannerAddNum.nextFloat();
         return scannerNum;
+    }
+
+    //Сложение
+    public void summation(float a, float b) {
+        setNumResult(a + b);
+    }
+
+    //Вычитание
+    public void subtraction(float a, float b) {
+        setNumResult(a - b);
+    }
+
+    //Уможение
+    public void multiplication(float a, float b) {
+        setNumResult(a * b);
+    }
+
+    //Деление
+    public void division(float a, float b) {
+        setNumResult(a / b);
+    }
+
+    public float calculator() {
+        switch (numChoiceOperation) {
+            case (1):
+                summation(numOne, numTwo);
+                break;
+            case (2):
+                subtraction(numOne, numTwo);
+                break;
+            case (3):
+                multiplication(numOne, numTwo);
+                break;
+            case (4):
+                division(numOne, numTwo);
+                break;
+            default:
+                showFail();
+                break;
+        }
+        return getNumResult();
+    }
+
+    //Вывод результата
+    public void showResult() {
+        System.out.println("Ответ " + getNumResult());
+    }
+    //Вывод ошибки
+    public void showFail(){
+        System.out.println("Ошибка");
     }
 }

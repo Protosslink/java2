@@ -30,9 +30,19 @@ public class ChoiseProgramm {
                 //Calc newCalc = new Calc();
                 //newCalc.selectOperation();
                 Task5CalcOpp task5CalcOpp = new Task5CalcOpp();
+                //Выбор операции
                 task5CalcOpp.choiceOperation();
                 //System.out.println(task5CalcOpp.getNumChoiceOperation());
-
+                //Ввод числа numOne
+                task5CalcOpp.setNumOne(task5CalcOpp.addNum());
+                //System.out.println(task5CalcOpp.getNumOne());
+                //Ввод числа numTwo
+                task5CalcOpp.setNumTwo(task5CalcOpp.addNum());
+                //System.out.println(task5CalcOpp.getNumTwo());
+                //Совершение операции
+                task5CalcOpp.calculator();
+                //Вывод на экран результата
+                task5CalcOpp.showResult();
 
 
                 /*Если пользователь ввел 2, то запускается поиск максимального числа в массиве*/
