@@ -5,11 +5,10 @@
 
 public class Candy {
 
-    //Переменные класса Candy
+    //Общие переменные класса Candy
     private String title;
     private int weight;
     private double price;
-    private String color;
 
     public String getTitle() {
         return title;
@@ -35,13 +34,7 @@ public class Candy {
         this.price = price;
     }
 
-    public String getColor() {
-        return color;
-    }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
 
 
 }
