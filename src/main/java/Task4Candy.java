@@ -30,15 +30,16 @@ public class Task4Candy {
         //Подсчет общей цены подарка
         sumPrice(jellybean.getPrice(), chocolate.getPrice(), zephyr.getPrice());
         //Подсчет Общего веса подарка
-        int sumWeight = jellybean.getWeight() + chocolate.getWeight() + zephyr.getWeight();
-        System.out.println("Вес подарка = " + sumWeight);
+        sumWeight(jellybean.getWeight(), chocolate.getWeight(), zephyr.getWeight());
 
     }
-    public void sumPrice(double a, double b, double c){
-        double d = a + b + c;
+
+    public void sumPrice(double a, double b, double c) {
+        double d = Math.round(a + b + c);
         System.out.println("Стоимость подарка = " + d);
     }
-    public void sumWeight(int a, int b, int c){
+
+    public void sumWeight(int a, int b, int c) {
         int d = a + b + c;
         System.out.println("Вес подарка = " + d);
     }
