@@ -27,8 +27,14 @@ public class ChoiseProgramm {
             /*Если пользователь ввел 1, то запускается калькулятор*/
             if (choise == 1) {
                 System.out.println("Выбран калькулятор");
-                Calc newCalc = new Calc();
-                newCalc.selectOperation();
+                //Calc newCalc = new Calc();
+                //newCalc.selectOperation();
+                Task5CalcOpp task5CalcOpp = new Task5CalcOpp();
+                task5CalcOpp.setNumOne(task5CalcOpp.addNum());
+                task5CalcOpp.setNumTwo(task5CalcOpp.addNum());
+
+                //System.out.println(task5CalcOpp.getNumOne() + " " + task5CalcOpp.getNumTwo());
+                //task5CalcOpp.choiceOperation();
                 /*Если пользователь ввел 2, то запускается поиск максимального числа в массиве*/
             } else if (choise == 2) {
                 System.out.println("Выбран поиск максимального числа в массиве");
