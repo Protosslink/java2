@@ -81,25 +81,24 @@ public class Task5CalcOpp {
         setNumResult(a / b);
     }
 
-    public float calculator() {
-        switch (numChoiceOperation) {
+    public void calculator() {
+        switch (getNumChoiceOperation()) {
             case (1):
-                summation(numOne, numTwo);
+                summation(getNumOne(), getNumTwo());
                 break;
             case (2):
-                subtraction(numOne, numTwo);
+                subtraction(getNumOne(), getNumTwo());
                 break;
             case (3):
-                multiplication(numOne, numTwo);
+                multiplication(getNumOne(), getNumTwo());
                 break;
             case (4):
-                division(numOne, numTwo);
+                division(getNumOne(), getNumTwo());
                 break;
             default:
                 showFail();
                 break;
         }
-        return getNumResult();
     }
 
     //Вывод результата
