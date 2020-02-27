@@ -1,67 +1,37 @@
-import java.util.Scanner;
+/**
+ * @author Barabanov D
+ * @class Task4Candy  используется в классе ChoiseProgramm
+ */
 
 public class Task4Candy {
 
-    //Ввод в консоль цвета
-    public String scannerColor() {
-        Scanner addScannerColor = new Scanner(System.in);
-        System.out.print("Введите цвет: ");
-        String scanerColor = addScannerColor.nextLine();
-        //System.out.print(scanerColor);
-        return scanerColor;
-    }
 
-    //Ввод в консоль веса
-    public int scannerWeight() {
-        Scanner addScannerWeight = new Scanner(System.in);
-        System.out.print("Введите вес : ");
-        int scanerColor = addScannerWeight.nextInt();
-        //System.out.print(scanerColor);
-        return scanerColor;
-    }
-
-    //Ввод в консоль цены
-    public double scannerPrice() {
-        Scanner addScannerPrice = new Scanner(System.in);
-        System.out.print("Введите цену в рублях : ");
-        double scanerPrice = addScannerPrice.nextDouble();
-        //System.out.print(scanerColor);
-        return scanerPrice;
-    }
-
-    //Общий вес подарка
-    public int totalWeight(int candy, int jellybean) {
-        return candy + jellybean;
-    }
-
-    //Общая стоимость подарка
-    public double totalPrice(double candy, double jellybean) {
-        return candy + jellybean;
-    }
-
-    public void gift() {
-        //Создание объекта Конфета
-        Candy candy = new Candy();
-        candy.setTitle("Конфета");
-        candy.setColor(scannerColor());
-        candy.setWeight(scannerWeight());
-        candy.setPrice(scannerPrice());
-
+    //Набор подарка
+    public void addGift() {
         //Создание объекта Мармелад
         Jellybean jellybean = new Jellybean();
         jellybean.setTitle("Мармелад");
-        jellybean.setColor(scannerColor());
-        jellybean.setWeight(scannerWeight());
-        jellybean.setPrice(scannerPrice());
+        jellybean.setWeight(20);
+        jellybean.setPrice(100);
+        //Создание объекта Зефир
+        Zephyr zephyr = new Zephyr();
+        zephyr.setTitle("Зефир");
+        zephyr.setWeight(30);
+        zephyr.setPrice(200);
+        //Создание объекта Шоколад
+        Chocolate chocolate = new Chocolate();
+        chocolate.setTitle("Шоколад");
+        chocolate.setWeight(40);
+        chocolate.setPrice(300);
+        //Информация о сладостях
+        jellybean.showInformationAboutCandy();
+        chocolate.showInformationAboutCandy();
+        zephyr.showInformationAboutCandy();
+        //Подсчет общей цены подарка
+        System.out.println("Стоимость подарка = " + jellybean.getPrice() + chocolate.getPrice() + zephyr.getPrice());
+        //Подсчет Общего веса подарка
+        System.out.println("Вес подарка = " + jellybean.getWeight() + chocolate.getWeight() + zephyr.getWeight());
 
-        //Вывод информации о подарке
-        System.out.println("Информация о конфетах:");
-        System.out.println(candy.getTitle() + " цвет " + candy.getColor() + " вес " + candy.getWeight() + " цена " + candy.getPrice());
-        System.out.println("Информация о мармеладе:");
-        System.out.println(jellybean.getTitle() + " цвет " + jellybean.getColor() + " вес " + jellybean.getWeight() + " цена " + jellybean.getPrice());
-        //Общая информация о подарке
-        System.out.println("Общая стоимость подарка: " + totalPrice(candy.getPrice(), jellybean.getPrice()));
-        System.out.println("Общий вес подарка: " + totalWeight(candy.getWeight(), jellybean.getWeight()));
     }
 }
 

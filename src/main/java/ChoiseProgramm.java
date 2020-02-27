@@ -40,11 +40,11 @@ public class ChoiseProgramm {
                 Task4Arr newTask = new Task4Arr();
                 newTask.addArrInt();
             } else if (choise == 4) {
-                System.out.println("Выбрано задание 4 чтение слов из файла");
+                System.out.println("Выбрано задание 4 Формирование подарка");
                 Task4Candy task4Candy = new Task4Candy();
-                task4Candy.gift();
+                task4Candy.addGift();
             } else if (choise == 5) {
-                System.out.println("Выбрано задание 6 Формирование подарка");
+                System.out.println("Выбрано задание 6 чтение слов из файла");
                 Task6 task6 = new Task6();
                 task6.readWordsInTxt();
             }

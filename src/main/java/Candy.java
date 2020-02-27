@@ -1,6 +1,6 @@
 /**
  * @author Barabanov D
- * @class Candy  используется в классе Task4Gif
+ * @class Candy  используется в классе Task4Candy
  */
 
 public class Candy {
@@ -34,7 +34,9 @@ public class Candy {
         this.price = price;
     }
 
-
+    public void showInformationAboutCandy(){
+        System.out.println("Название сладости " + getTitle() + " Вес " + getWeight() + " цена " + getPrice());
+    }
 
 
 }
