@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -20,6 +21,7 @@ public class Task6 {
         try {
             Scanner scanFile = readFile();
             showWords(scanFile);
+            addCollectionArrayList(scanFile);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("Файл не найден!");
@@ -32,7 +34,15 @@ public class Task6 {
             System.out.println(scan.nextLine());
         }
     }
+
+    //Создание коллекции
+    public void addCollectionArrayList(Scanner scan) {
+        File file = new File("Text1");
+        ArrayList<String> words = new ArrayList<>();
+    }
 }
+
+
 
 
 

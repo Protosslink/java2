@@ -103,7 +103,7 @@ public class Task5CalcOpp {
 
     //Вывод результата
     public void showResult() {
-        System.out.println("Ответ " + getNumResult());
+        System.out.println(getNumResult());
     }
     //Вывод ошибки
     public void showFail(){
