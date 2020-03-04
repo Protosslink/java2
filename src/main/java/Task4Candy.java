@@ -62,15 +62,6 @@ public class Task4Candy {
 
     }
 
-    public void sumPrice(double a, double b, double c) {
-        double d = Math.round(a + b + c);
-        System.out.println("Стоимость подарка = " + d);
-    }
-
-    public void sumWeight(int a, int b, int c) {
-        int d = a + b + c;
-        System.out.println("Вес подарка = " + d);
-    }
 }
 
 
