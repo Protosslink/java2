@@ -24,9 +24,9 @@ public class Task4Candy {
         chocolate.setWeight(40);
         chocolate.setPrice(300.30);
         //Информация о сладостях
-        jellybean.showInformationAboutCandy();
-        chocolate.showInformationAboutCandy();
-        zephyr.showInformationAboutCandy();
+        jellybean.showInformationAboutCandy(jellybean.getTitle(),jellybean.getWeight(),jellybean.getPrice());
+        chocolate.showInformationAboutCandy(chocolate.getTitle(),chocolate.getWeight(),chocolate.getPrice());
+        zephyr.showInformationAboutCandy(zephyr.getTitle(),zephyr.getWeight(),zephyr.getPrice());
         //Подсчет общей цены подарка
         sumPrice(jellybean.getPrice(), chocolate.getPrice(), zephyr.getPrice());
         //Подсчет Общего веса подарка

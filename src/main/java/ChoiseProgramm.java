@@ -4,7 +4,6 @@
  * @see #ChoiseProg
  */
 
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /*Выбор программы: Калькулятор или поиск максимального числа в массиве*/

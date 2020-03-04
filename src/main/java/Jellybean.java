@@ -4,14 +4,21 @@
  */
 
 public class Jellybean extends Candy {
-
     //Уникальный параметр класса Jellybean
-    private String madeIn = "Russia";
+    private String calories;
 
-    public String getMadeIn() {
-        return madeIn;
+    //Конструктор класса Jellybean
+    public Jellybean(String calories) {
+        this.calories = calories;
     }
 
+    //Сеттеры и геттеры
+    public String getCalories() {
+        return calories;
+    }
 
+    public void setCalories(String calories) {
+        this.calories = calories;
+    }
 }
 

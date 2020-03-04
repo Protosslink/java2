@@ -10,6 +10,10 @@ public class Candy {
     private int weight;
     private double price;
 
+    //Массив candy, в подарке 9 сладостей
+    Candy[] candy = new Candy[9];
+
+    //Сеттеры и геттеры
     public String getTitle() {
         return title;
     }
@@ -34,9 +38,7 @@ public class Candy {
         this.price = price;
     }
 
-    public void showInformationAboutCandy(){
-        System.out.println("Название сладости " + getTitle() + " Вес " + getWeight() + " цена " + getPrice());
+    public String showInformationAboutCandy(String title, int weight, double price){
+        return ("Название сладости " + getTitle() + " Вес " + getWeight() + " цена " + getPrice());
     }
-
-
 }
