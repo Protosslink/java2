@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Task5CalcOpp {
@@ -48,9 +49,13 @@ public class Task5CalcOpp {
         String[] arr = new String[]{"", "1. сложение", "2. вычитание", "3. умножение", "4. деление"};
         for (int i = 1; i < arr.length; i++) System.out.println(arr[i]);
         System.out.print("Введите номер операции: ");
+        try{
         Scanner scannerChoiseNum = new Scanner(System.in);
         int choiceNum = scannerChoiseNum.nextInt();
         setNumChoiceOperation(choiceNum);
+        }catch (InputMismatchException e) {
+            System.out.println("Ошибка ввода");
+        }
     }
 
     //Ввод чисел
