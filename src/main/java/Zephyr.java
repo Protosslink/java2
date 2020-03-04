@@ -20,4 +20,10 @@ public class Zephyr extends Candy {
     public void setColor(String color) {
         this.color = color;
     }
+
+    //Переопределение метода showInformationAboutCandy для класса Zephyr
+    @Override
+    public String showInformationAboutCandy(String title, int weight, double price) {
+        return super.showInformationAboutCandy(title, weight, price);
+    }
 }

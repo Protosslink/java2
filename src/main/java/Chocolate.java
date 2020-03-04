@@ -20,4 +20,10 @@ public class Chocolate extends Candy {
     public void setMadeIn(String madeIn) {
         this.madeIn = madeIn;
     }
+
+    //Переопределение метода showInformationAboutCandy для класса Chocolate
+    @Override
+    public String showInformationAboutCandy(String title, int weight, double price) {
+        return super.showInformationAboutCandy(title, weight, price);
+    }
 }

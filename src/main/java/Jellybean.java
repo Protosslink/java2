@@ -5,20 +5,26 @@
 
 public class Jellybean extends Candy {
     //Уникальный параметр класса Jellybean
-    private String calories;
+    private int calories;
 
     //Конструктор класса Jellybean
-    public Jellybean(String calories) {
+    public Jellybean(int calories) {
         this.calories = calories;
     }
 
     //Сеттеры и геттеры
-    public String getCalories() {
+    public int getCalories() {
         return calories;
     }
 
-    public void setCalories(String calories) {
+    public void setCalories(int calories) {
         this.calories = calories;
+    }
+
+    //Переопределение метода showInformationAboutCandy для класса Jellybean
+    @Override
+    public String showInformationAboutCandy(String title, int weight, double price) {
+        return super.showInformationAboutCandy(title, weight, price);
     }
 }
 
