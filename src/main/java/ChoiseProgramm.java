@@ -4,12 +4,13 @@
  * @see #ChoiseProg
  */
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /*Выбор программы: Калькулятор или поиск максимального числа в массиве*/
 public class ChoiseProgramm {
 
-    public int ChoiseProg() {
+    public int ChoiseProg() throws FileNotFoundException {
         System.out.println("1 калькулятор");
         System.out.println("2 поиск максимального числа в массиве");
         System.out.println("3 задание 4 массив");
@@ -60,7 +61,7 @@ public class ChoiseProgramm {
             } else if (choise == 5) {
                 System.out.println("Выбрано задание 6 чтение слов из файла");
                 Task6 task6 = new Task6();
-                task6.readWordsInTxt();
+                task6.task();
             }
         }
         return choise;

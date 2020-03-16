@@ -1,50 +1,39 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-/**
- * @author Barabanov Dmitriy
- */
+import java.util.*;
 
 public class Task6 {
 
-    //Чтение файла
-    public static Scanner readFile() throws FileNotFoundException {
-        File file = new File("Text1");
-        Scanner scanFile = new Scanner(file);
-        return scanFile;
-    }
+    public void task() throws FileNotFoundException {
 
-    //Исполнение
-    public void readWordsInTxt() {
-        try {
-            Scanner scanFile = readFile();
-            showWords(scanFile);
-            addCollectionArrayList(scanFile);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.out.println("Файл не найден!");
+        Scanner scanner1 = new Scanner(new File("Text1"));
+        Set<String> words = new TreeSet<>();
+        while (scanner1.hasNext()) {
+            String word = scanner1.useDelimiter("\\s+").next();
+            words.add(word);
         }
-    }
-
-    //Вывод на экран слов из файла
-    public void showWords(Scanner scan) {
-        while (scan.hasNextLine()) {
-            System.out.println(scan.nextLine());
+        System.out.println(words);
+        Scanner scanner = new Scanner(new File("Text1"));
+        Map<String, Integer> statistics = new HashMap<>();
+        while (scanner.hasNext()) {
+            String word = scanner.useDelimiter("\\s+").next();
+            Integer count = statistics.get(word);
+            if (count == null) {
+                count = 0;
+            }
+            statistics.put(word, ++count);
         }
-    }
+        System.out.println(statistics);
+//Collection<Integer> values = statistics.values();
 
-    //Создание коллекции
-    public void addCollectionArrayList(Scanner scan) {
-        File file = new File("Text1");
-        ArrayList<String> words = new ArrayList<>();
+        {
+            Map.Entry<String, Integer> maxEntry = null;
+            for (Map.Entry<String, Integer> entry : statistics.entrySet()) {
+                if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0) {
+                    maxEntry = entry;
+                }
+            }
+            System.out.println("Слово " + maxEntry.getKey() + " повторяется " + maxEntry.getValue() + " раз(а)");
+        }
     }
 }
-
-
-
-
-
-
-

@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
  * @author Barabanov Dmitriy
  */
 public class Base {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         //Выбор приложения
         ChoiseProgramm chProg = new ChoiseProgramm();
