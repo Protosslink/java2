@@ -8,6 +8,7 @@ public class Task5CalcOpp {
     private float numTwo = 0;
     private float numResult = 0;
     private int numChoiceOperation = 0;
+    float scannerNum = 0;
 
 
     //Гетеры и сетеры
@@ -49,20 +50,31 @@ public class Task5CalcOpp {
         String[] arr = new String[]{"", "1. сложение", "2. вычитание", "3. умножение", "4. деление"};
         for (int i = 1; i < arr.length; i++) System.out.println(arr[i]);
         System.out.print("Введите номер операции: ");
-        try{
-        Scanner scannerChoiseNum = new Scanner(System.in);
-        int choiceNum = scannerChoiseNum.nextInt();
-        setNumChoiceOperation(choiceNum);
-        }catch (InputMismatchException e) {
+        try {
+            Scanner scannerChoiseNum = new Scanner(System.in);
+            int choiceNum = scannerChoiseNum.nextInt(^[1-4]);
+            if (choiceNum <= 0 || choiceNum > 4) {
+                System.out.println("Ошибка ввода ");
+                System.exit(choiceNum);
+            }
+            setNumChoiceOperation(choiceNum);
+        } catch (InputMismatchException e) {
             System.out.println("Ошибка ввода");
+            System.exit(numChoiceOperation);
         }
     }
 
     //Ввод чисел
     public float addNum() {
-        System.out.print("Введите бробное число ");
-        Scanner scannerAddNum = new Scanner(System.in);
-        float scannerNum = scannerAddNum.nextFloat();
+        try {
+            System.out.print("Введите дробное число ");
+            Scanner scannerAddNum = new Scanner(System.in);
+            scannerNum = scannerAddNum.nextFloat();
+
+        }catch (InputMismatchException e){
+            System.out.println("Ошибка ввода");
+            System.exit(numChoiceOperation);
+        }
         return scannerNum;
     }
 
@@ -110,8 +122,9 @@ public class Task5CalcOpp {
     public void showResult() {
         System.out.println(getNumResult());
     }
+
     //Вывод ошибки
-    public void showFail(){
+    public void showFail() {
         System.out.println("Ошибка");
     }
 }
