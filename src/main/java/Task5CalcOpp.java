@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class Task5CalcOpp {
 
+    float scannerNum = 0;
     //Переменные
     private float numOne = 0;
     private float numTwo = 0;
     private float numResult = 0;
     private int numChoiceOperation = 0;
-    float scannerNum = 0;
-
+    public boolean resultOperation = false;
 
     //Гетеры и сетеры
     public float getNumOne() {
@@ -41,7 +41,8 @@ public class Task5CalcOpp {
     }
 
     public void setNumResult(float numResult) {
-        this.numResult = numResult;
+       this.numResult = numResult;
+        resultOperation = true;
     }
 
     //Выбор операции
@@ -71,7 +72,7 @@ public class Task5CalcOpp {
             Scanner scannerAddNum = new Scanner(System.in);
             scannerNum = scannerAddNum.nextFloat();
 
-        }catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("Ошибка ввода");
             System.exit(numChoiceOperation);
         }
@@ -119,8 +120,9 @@ public class Task5CalcOpp {
     }
 
     //Вывод результата
-    public void showResult() {
+    public boolean showResult() {
         System.out.println(getNumResult());
+        return resultOperation;
     }
 
     //Вывод ошибки

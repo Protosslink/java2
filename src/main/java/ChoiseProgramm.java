@@ -44,6 +44,7 @@ public class ChoiseProgramm {
                 //Вывод на экран результата
                 task5CalcOpp.showResult();
 
+
                 /*Если пользователь ввел 2, то запускается поиск максимального числа в массиве*/
             } else if (choise == 2) {
                 System.out.println("Выбран поиск максимального числа в массиве");

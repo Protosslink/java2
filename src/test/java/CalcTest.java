@@ -3,6 +3,11 @@ import org.junit.Test;
 
 public class CalcTest {
     @Test
+    public void checkResult(){
+        Task5CalcOpp task5CalcOpp = new Task5CalcOpp();
+        Assert.assertTrue("Операция выполнена успешно", task5CalcOpp.showResult());
+    }
+    @Test
     public void checkNumOneDefault(){
         Task5CalcOpp task5CalcOpp1 = new Task5CalcOpp();
         Assert.assertEquals("Значение по умолчанию первого числа должно ровняться нулю", 0, task5CalcOpp1.getNumOne(), 0);
