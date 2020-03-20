@@ -52,7 +52,7 @@ public class Task5CalcOpp {
         System.out.print("Введите номер операции: ");
         try {
             Scanner scannerChoiseNum = new Scanner(System.in);
-            int choiceNum = scannerChoiseNum.nextInt(^[1-4]);
+            int choiceNum = scannerChoiseNum.nextInt();
             if (choiceNum <= 0 || choiceNum > 4) {
                 System.out.println("Ошибка ввода ");
                 System.exit(choiceNum);
